@@ -11,7 +11,7 @@ public class Frame {
         
         frame.add(screen);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Snake");
+        frame.setTitle("Snake&Apple Game");
         frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);

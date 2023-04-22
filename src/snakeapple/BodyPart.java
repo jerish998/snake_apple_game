@@ -1,7 +1,6 @@
 package snakeapple;
 import java.awt.Color;
 import java.awt.Graphics;
-public class Snake {
 	
 	
 	 
@@ -39,4 +38,4 @@ public class Snake {
 	    
 	}
 
-}
+

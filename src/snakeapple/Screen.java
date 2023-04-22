@@ -49,7 +49,9 @@ import javax.swing.JPanel;
 	        
 	        start();
 	    }
-	 
+	    
+	    
+	 //////////////tick for adding new body part ,apple
 	    public void tick() {
 	        if (snake.size() == 0) {
 	            b = new BodyPart(xCoor, yCoor, 10);
@@ -87,7 +89,7 @@ import javax.swing.JPanel;
 	        
 	        ticks++;
 	        
-	        if(ticks > 250000) {
+	        if(ticks > 2500000) {
 	            if(right) xCoor++;
 	            if(left) xCoor--;
 	            if(up) yCoor--;
@@ -103,19 +105,19 @@ import javax.swing.JPanel;
 	            }
 	        }
 	    }
-	 
+	 //////////////////end of tick()
 	    public void paint(Graphics g) {
 	        g.clearRect(0, 0, WIDTH, HEIGHT);
-	        g.setColor(Color.ORANGE);
+	        g.setColor(Color.WHITE);
 	        g.fillRect(0, 0, WIDTH, HEIGHT);
 	        
 	        g.setColor(Color.BLACK);
-	        for (int i = 0; i < WIDTH / 10; i++) {
+	       /* for (int i = 0; i < WIDTH / 10; i++) {
 	            g.drawLine(i * 10, 0, i * 10, HEIGHT);
 	        }
 	        for (int i = 0; i < HEIGHT / 10; i++) {
 	            g.drawLine(0, i * 10, WIDTH, i * 10);
-	        }
+	        }*/
 	 
 	        for (int i = 0; i < snake.size(); i++) {
 	            snake.get(i).draw(g);
@@ -134,6 +136,7 @@ import javax.swing.JPanel;
 	 
 	    public void stop() {
 	        running = false;
+	        System.out.println("game over");
 	        try {
 	            thread.join();
 	        } catch (InterruptedException e) {
